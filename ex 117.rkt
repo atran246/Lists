@@ -10,3 +10,6 @@
 ; - (cons PositiveNumber List-of-amounts)
 ; interp. a List-of-amounts represents some amounts of money
 
+; List-of-amounts -> number
+; To take a list of numbers and add them together
+(define (sum loa) 0)
