@@ -14,4 +14,8 @@
 ; To take a list of numbers and add them together
 (check-expect (sum (list 1 2 3 4 5)) 15)
 (check-expect (sum (cons 0 empty)) 0)
-(define (sum loa) 0)
+(define (sum loa) 
+  (cond
+    [(empty? loa)...]
+    [else
+     (... (first loa) ... (sum (rest loa))...)]))
