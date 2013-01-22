@@ -11,4 +11,8 @@
 ; List-of-numbers -> boolean
 ; to take a list of numbers and determine if all the numbers in the list are 
 ; positive
-(define (pos? loa) true)
+(define (pos? lon)
+  (cond 
+    [(empty? lon)...]
+    [else
+     (... (first lon) ... (pos? (rest lon))...)]))
