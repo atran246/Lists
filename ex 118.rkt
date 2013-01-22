@@ -8,4 +8,7 @@
 ; - (cons Number List-of-numbers)
 ; interpret a List-of-Numbers represents some list of numbers
 
-
+; List-of-numbers -> boolean
+; to take a list of numbers and determine if all the numbers in the list are 
+; positive
+(define (pos? loa) true)
