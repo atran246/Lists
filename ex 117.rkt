@@ -16,6 +16,6 @@
 (check-expect (sum (cons 0 empty)) 0)
 (define (sum loa) 
   (cond
-    [(empty? loa)...]
+    [(empty? loa) 0]
     [else
-     (... (first loa) ... (sum (rest loa))...)]))
+     (+ (first loa) (sum (rest loa)))]))
