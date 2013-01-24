@@ -14,6 +14,7 @@
 (check-expect (juxtapose "hello") "hello")
 (define (juxtapose los) 
   (cond
-    [(empty? los) ...]
-    [(string? los) ...]
-    [(string? (first los)) ... (rest los)...]))
+    [(empty? los) "" ]
+    [(string? los) los]
+    [(string? (first los))(string-append (first los) (juxtapose (rest los)))]
+    ))
