@@ -16,8 +16,10 @@
 (check-expect (pos? 1) true)
 (check-expect (pos? -4) false)
 (define (pos? lon)
-  (cond
-    [(empty? lon)...]
-    [else
-     (... (first lon) ... (pos? (rest lon))...)]))
+   (cond 
+    [(empty? lon) true]
+    [(number? lon) 
+     (if (< lon 0) false true)]
+    [(number? (first lon)) 
+     (if (< (first lon) 0) false (pos? (rest lon)))]))
 
