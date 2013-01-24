@@ -7,3 +7,12 @@
 ; - empty
 ; - (cons BooleanValue List-of-Boolean)
 ; interp. a List-of-Boolean represents some list of true/false values
+
+; List-of-boolean -> boolean
+; to take a list of boolean and determine if all them in the list are true
+(define (all-true lob) true)
+
+
+; List-of-boolean -> boolean
+; To take a list of boolean and determine if at least one of them in the list is true
+(define (one-true lob) true)
