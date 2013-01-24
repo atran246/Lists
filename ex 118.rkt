@@ -11,8 +11,13 @@
 ; List-of-numbers -> boolean
 ; to take a list of numbers and determine if all the numbers in the list are 
 ; positive
+(check-expect (pos? (list 34 48 23 1)) true)
+(check-expect (pos? (list 34 239 -2 3)) false)
+(check-expect (pos? 1) true)
+(check-expect (pos? -4) false)
 (define (pos? lon)
-  (cond 
+  (cond
     [(empty? lon)...]
     [else
      (... (first lon) ... (pos? (rest lon))...)]))
+
