@@ -7,3 +7,7 @@
 ; - empty
 ; - (cons String List-of-strings)
 ; interp. a List-of-strings represents a list of strings
+
+; List-of-Strings -> Strig
+; to take a list of strings and append them all into one long string
+(define (juxtapose los) "abcdefg")
