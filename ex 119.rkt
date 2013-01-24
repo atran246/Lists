@@ -10,9 +10,17 @@
 
 ; List-of-boolean -> boolean
 ; to take a list of boolean and determine if all them in the list are true
+(check-expect (all-true (list true false true)) false)
+(check-expect (all-true (list true true true)) true)
+(check-expect (all-true true) true)
+(check-expect (all-true false) false)
 (define (all-true lob) true)
 
 
 ; List-of-boolean -> boolean
 ; To take a list of boolean and determine if at least one of them in the list is true
+(check-expect (one-true (list true false true)) true)
+(check-expect (one-true (list false false false)) false)
+(check-expect (one-true true) true)
+(check-expect (one-true false) false)
 (define (one-true lob) true)
