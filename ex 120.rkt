@@ -10,4 +10,6 @@
 
 ; List-of-Strings -> Strig
 ; to take a list of strings and append them all into one long string
+(check-expect (juxtapose (list "abc" "def" "ghi")) "abcdefghi")
+(check-expect (juxtapose "hello") "hello")
 (define (juxtapose los) "abcdefg")
