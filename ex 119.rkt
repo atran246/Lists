@@ -16,10 +16,10 @@
 (check-expect (all-true false) false)
 (define (all-true lob) 
   (cond
-    [(empty? lob) ...]
-    [(boolean? lob) ...]
-    [(boolean=? ... (first lob)) ...]
-    [else ...]))
+    [(empty? lob) true]
+    [(boolean? lob) (if (boolean=? true lob) true false)]
+    [(boolean=? true (first lob)) (all-true (rest lob))]
+    [else false]))
 
 
 ; List-of-boolean -> boolean
@@ -30,7 +30,7 @@
 (check-expect (one-true false) false)
 (define (one-true lob) 
   (cond
-    [(empty? lob)...]
-    [(boolean? lob)...]
-    [(boolean=? ... (first lob)) ...]
-    [else ...]))
+    [(empty? lob) false]
+    [(boolean? lob) (if (boolean=? true lob) true false)]
+    [(boolean=? false (first lob)) (one-true (rest lob))]
+    [else true]))
