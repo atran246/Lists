@@ -12,4 +12,8 @@
 ; to take a list of strings and append them all into one long string
 (check-expect (juxtapose (list "abc" "def" "ghi")) "abcdefghi")
 (check-expect (juxtapose "hello") "hello")
-(define (juxtapose los) "abcdefg")
+(define (juxtapose los) 
+  (cond
+    [(empty? los) ...]
+    [(string? los) ...]
+    [(string? (first los)) ... (rest los)...]))
